@@ -1,8 +1,7 @@
 ---
 name: sf-code-analyzer
 description: Run Salesforce Code Analyzer on Apex, Trigger, Flow, or metadata files. Use after writing or modifying .cls, .trigger, .xml, or flow files. Also use when asked to scan, lint, or check code quality.
-allowed-tools: Bash(sf *)
-argument-hint: [file, directory, "security", "cleancode", or blank for full scan]
+argument-hint: "file, directory, security, cleancode, or blank for full scan"
 ---
 
 # Salesforce Code Analyzer

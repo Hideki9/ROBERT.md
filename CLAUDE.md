@@ -22,6 +22,7 @@ Creates symlinks: `~/.claude/CLAUDE.md`, `~/.claude/settings.json`, `~/.claude/r
 - **`claude/CLAUDE.md`** — Global coding philosophy (symlinked to `~/.claude/CLAUDE.md`). Applies to all projects.
 - **`claude/settings.json`** — Pre-approved permissions and env vars (symlinked to `~/.claude/settings.json`).
 - **`claude/rules/`** — Language-specific coding standards, scoped via `paths:` frontmatter. Currently only `salesforce/coding-standards.md`. Each language gets its own subfolder.
+- **`claude/skills/`** — Personal skills, symlinked individually into `~/.claude/skills/`. Company-wide skills live in the separate AQUIVA.md repo and are symlinked the same way.
 
 ## Layering Model
 

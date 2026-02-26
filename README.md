@@ -59,10 +59,24 @@ I run [`install.sh`](install.sh) once. It symlinks everything into `~/.claude/`,
 ```
 
 ```text
-~/.claude/CLAUDE.md      →  this repo/claude/CLAUDE.md
-~/.claude/settings.json  →  this repo/claude/settings.json
-~/.claude/rules/         →  this repo/claude/rules/
-~/.claude/skills/        →  this repo/claude/skills/
+~/.claude/CLAUDE.md                   →  this repo/claude/CLAUDE.md
+~/.claude/settings.json               →  this repo/claude/settings.json
+~/.claude/rules/                      →  this repo/claude/rules/
+~/.claude/skills/sf-code-analyzer/    →  this repo/claude/skills/sf-code-analyzer/
 ```
 
 After I pull changes, the next session gets them automatically — symlinks always point to the latest version.
+
+### Multiple repos, one skills directory
+
+`~/.claude/skills/` is a real directory, not a symlink. This is intentional — it lets multiple config repos contribute skills to the same place. My personal repo, the [Aquiva company repo](https://github.com/AquivaLabs/AQUIVA.md), and any project can all add skills. Each install script symlinks its individual skill folders in, and they coexist:
+
+```text
+~/.claude/skills/
+├── sf-code-analyzer/    →  from ROBERT.md (personal)
+├── assess-codebase/     →  from AQUIVA.md (company)
+├── some-personal-skill/ →  from ROBERT.md only
+└── some-company-skill/  →  from AQUIVA.md only
+```
+
+When the same skill exists in both, the last `install.sh` to run wins — that's fine when the content is identical. For project-specific overrides, a project's own `.claude/skills/` always takes precedence over `~/.claude/skills/`.
