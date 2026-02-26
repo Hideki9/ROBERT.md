@@ -13,7 +13,10 @@
       "mcp__voicemode__converse",
       "mcp__voicemode__service",
       "Skill(sf-code-analyzer)",
-      "Skill(sf-code-analyzer:*)"
+      "Skill(sf-code-analyzer:*)",
+      "Read(//Users/rsoesemann/dev/aquivalabs/agent-script-recipes/**)",
+      "Bash(find /Users/rsoesemann/dev/aquivalabs/agent-script-recipes -name \"*.agent\" -exec grep -l \"enhanced.chat\\\\|omni.channel\\\\|escalation\\\\|connection\" {} ;)",
+      "Read(//Users/rsoesemann/dev/**)"
     ]
   }
 }

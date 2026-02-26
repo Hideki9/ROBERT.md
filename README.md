@@ -50,8 +50,6 @@ Reusable capabilities that Claude can trigger automatically or I can invoke with
 
 **[`sf-code-analyzer`](claude/skills/sf-code-analyzer/)** — Runs Salesforce Code Analyzer after code changes. Smart enough to detect managed packages (via `sfdx-project.json`) and only run AppExchange security rules when they matter. Otherwise just my opinionated clean code rules.
 
-**[`agentforce`](claude/skills/agentforce/)** — Full Agent Script reference for building Agentforce agents. Condensed DSL guide, known beta issues, and links to official docs — so Claude actually knows the syntax instead of hallucinating it.
-
 ## How I use it
 
 I run [`install.sh`](install.sh) once. It symlinks everything into `~/.claude/`, where Claude Code picks it up at session start.
