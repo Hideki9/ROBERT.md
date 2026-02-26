@@ -11,24 +11,22 @@ This repo is me trying to make sense of all of that. One place for the stuff tha
 
 The hard part isn't *what* to put in these files — it's *where*. What's mine is different from what's [Aquiva](https://aquivalabs.com)'s, which is different from what a specific project needs.
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│  Me (this repo)                                              │
+<pre>┌──────────────────────────────────────────────────────────────┐
+│  Me (<a href="https://github.com/rsoesemann/ROBERT.md">ROBERT.md</a>)                                              │
 │  How I talk. How I code. What annoys me.                     │
-│  → SOUL.md, CLAUDE.md, rules/salesforce/                     │
+│  <a href="SOUL.md">SOUL.md</a>, <a href="claude/CLAUDE.md">CLAUDE.md</a>, <a href="claude/rules/salesforce/">rules/salesforce/</a>                       │
 │                                                              │
 │  ┌────────────────────────────────────────────────────────┐  │
-│  │  Aquiva (separate private repo)                        │  │
+│  │  Aquiva (<a href="https://github.com/AquivaLabs/AQUIVA.md">AQUIVA.md</a>)                                    │  │
 │  │  Shared conventions. Company-wide skills & workflows.  │  │
 │  │                                                        │  │
 │  │  ┌──────────────────────────────────────────────────┐  │  │
-│  │  │  Project (each repo)                             │  │  │
+│  │  │  Project (e.g. <a href="https://github.com/aquivalabs/my-org-butler">my-org-butler</a>)                     │  │  │
 │  │  │  Domain model. Features. Project-specific stuff. │  │  │
-│  │  │  → CLAUDE.md, AGENTS.md, .claude/skills/         │  │  │
+│  │  │  .claude/CLAUDE.md, .claude/skills/              │  │  │
 │  │  └──────────────────────────────────────────────────┘  │  │
 │  └────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────┘
-```
+└──────────────────────────────────────────────────────────────┘</pre>
 
 Claude Code [merges all of this](https://code.claude.com/docs/en/best-practices) at session start. Nothing overrides — it all stacks.
 

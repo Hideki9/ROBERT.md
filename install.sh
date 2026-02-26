@@ -4,15 +4,23 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 mkdir -p ~/.claude/skills
 
-ln -sf "$SCRIPT_DIR/claude/CLAUDE.md" ~/.claude/CLAUDE.md
-ln -sf "$SCRIPT_DIR/claude/settings.json" ~/.claude/settings.json
-ln -sf "$SCRIPT_DIR/claude/rules" ~/.claude/rules
+ln -sfn "$SCRIPT_DIR/claude/CLAUDE.md" ~/.claude/CLAUDE.md
+ln -sfn "$SCRIPT_DIR/claude/settings.json" ~/.claude/settings.json
+ln -sfn "$SCRIPT_DIR/claude/rules" ~/.claude/rules
 
 # Symlink each skill individually (not the whole directory).
 # This lets multiple repos (personal, company) contribute skills to ~/.claude/skills/.
 for skill_dir in "$SCRIPT_DIR"/claude/skills/*/; do
     skill_name=$(basename "$skill_dir")
-    ln -sf "$skill_dir" ~/.claude/skills/"$skill_name"
+    target=~/.claude/skills/"$skill_name"
+
+    # ln -sfn can replace a symlink but not a real directory.
+    # If the target is a real directory (from a previous manual copy), remove it first.
+    if [ -d "$target" ] && [ ! -L "$target" ]; then
+        rm -rf "$target"
+    fi
+
+    ln -sfn "$skill_dir" "$target"
 done
 
 echo "Done. Symlinks created in ~/.claude/"
