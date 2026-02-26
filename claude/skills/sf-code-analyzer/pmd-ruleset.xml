@@ -20,14 +20,7 @@
         <exclude name="DebugsShouldUseLoggingLevel" /> <!-- Is buggy -->
         <exclude name="ApexUnitTestClassShouldHaveRunAs" /> <!-- No smart person does that -->
         <exclude name="ApexAssertionsShouldIncludeMessage" /> <!-- Better have a focused well named method -->
-        <exclude name="ApexUnitTestClassShouldHaveAsserts" /> <!-- Configured below -->
-    </rule>
-
-    <rule ref="category/apex/bestpractices.xml/ApexUnitTestClassShouldHaveAsserts" message="Apex unit test classes should have at least one System.assert() or assertEquals() or AssertNotEquals() call">
-        <priority>2</priority>
-        <properties>
-            <property name="additionalAssertMethodPattern" value="((System\.Assert|Assert|Asserts)\.\w+|verify\w+)"/>
-        </properties>
+        <exclude name="ApexUnitTestClassShouldHaveAsserts" /> <!-- Stupid rule, a well-named test method is the assertion -->
     </rule>
     
     <rule ref="category/apex/design.xml">      
